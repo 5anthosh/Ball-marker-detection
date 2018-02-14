@@ -209,6 +209,11 @@ with tf.Session() as sess:
         print("number " + str(i) + ": " + str(epoch_cost))
     saver = tf.train.Saver()
     saver.save(sess, "my_model")
+    np.save(sess.run(W_1), "W_1")
+    np.save(sess.run(W_2), "W_2")
+    np.save(sess.run(W_3), "W_3")
+    np.save(sess.run(W_4), "W_4")
+    np.save(sess.run(W_5), "W_5")
 
 
 
